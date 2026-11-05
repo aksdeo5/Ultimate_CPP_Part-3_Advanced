@@ -10,8 +10,9 @@ namespace aksdeo5::ultimate_cpp_advanced
   class Rectangle
   {
   public:
-    void draw();
-    int getArea();
+    // Const-qualified member functions
+    void draw() const;
+    int getArea() const;
 
     Rectangle() = default;
 

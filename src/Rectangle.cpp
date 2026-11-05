@@ -6,12 +6,14 @@ using namespace std;
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
-  void Rectangle::draw()
+  // Const-qualified member function defintion
+  // 'const' keyword is required at function definition as well
+  void Rectangle::draw() const
   {
     cout << "Drawing rectangle of width " << width << " and height " << height << endl;
   }
 
-  int Rectangle::getArea()
+  int Rectangle::getArea() const
   {
     return width * height;
   }

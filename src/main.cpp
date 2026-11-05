@@ -5,17 +5,17 @@
 using namespace std;
 using namespace aksdeo5::ultimate_cpp_advanced;
 
-void show_rectangle(Rectangle rectangle)
-{
-}
-
 int main()
 {
-    Rectangle first{5, 6};
-    Rectangle second{10, 12};
+    // Constant Object
+    // All member variables are treated as constant for a constant object
+    const Rectangle rectangle{5, 6};
 
-    // Accessing a public static member of a class
-    cout << Rectangle::getObjectsCount() << endl;
+    // Only const-qualified member functions can be invoked on a constant object
+    cout << rectangle.getWidth() << endl;
+    cout << rectangle.getHeight() << endl;
+    cout << rectangle.getArea() << endl;
+    rectangle.draw();
 
     return 0;
 }
