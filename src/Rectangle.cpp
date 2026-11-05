@@ -29,6 +29,7 @@ namespace aksdeo5::ultimate_cpp_advanced
     cout << "Construcing a Rectangle with width and height" << endl;
     setWidth(width);
     setHeight(height);
+    objectsCount++;
   }
 
   // Constructor delegation
@@ -68,5 +69,12 @@ namespace aksdeo5::ultimate_cpp_advanced
 
     this->height = height;
   }
+
+  int Rectangle::getObjectsCount()
+  {
+    return objectsCount;
+  }
+
+  int Rectangle::objectsCount = 0;
 
 } // namespace aksdeo5::ultimate_cpp_advanced

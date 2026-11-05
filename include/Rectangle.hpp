@@ -36,10 +36,17 @@ namespace aksdeo5::ultimate_cpp_advanced
     void setWidth(int width);
     void setHeight(int height);
 
+    // Static Member Function
+    static int getObjectsCount();
+
   private:
     int width = 0;
     int height = 0;
     string color;
+
+    // Static Member Variable
+    // Must be explicitly defined in the implemenation code
+    static int objectsCount;
   };
 } // namespace aksdeo5::ultimate_cpp_advanced
 
