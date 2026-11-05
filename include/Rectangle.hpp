@@ -9,6 +9,9 @@ namespace aksdeo5::ultimate_cpp_advanced
     void draw();
     int getArea();
 
+    // Constructor
+    Rectangle(int width, int height);
+
     // Getters/Accessors
     int getWidth() const;
     int getHeight() const;
@@ -18,8 +21,8 @@ namespace aksdeo5::ultimate_cpp_advanced
     void setHeight(int height);
 
   private:
-    int width;
-    int height;
+    int width = 0;
+    int height = 0;
   };
 } // namespace aksdeo5::ultimate_cpp_advanced
 

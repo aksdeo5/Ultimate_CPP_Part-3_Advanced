@@ -1,4 +1,4 @@
-#include "TextBox.hpp"
+#include "Rectangle.hpp"
 
 #include <iostream>
 
@@ -7,9 +7,13 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    TextBox textBox;
-    textBox.setValue("text");
-    cout << textBox.getValue() << endl;
+#if 0
+    // Adding any explicit constructor removes the implicit default constructor
+    Rectangle rectangle;
+#endif
+
+    Rectangle rectangle{5, 6};
+    cout << rectangle.getArea() << endl;
 
     return 0;
 }

@@ -16,6 +16,13 @@ namespace aksdeo5::ultimate_cpp_advanced
     return width * height;
   }
 
+  Rectangle::Rectangle(int width, int height)
+  {
+    cout << "Construcing a Rectangle" << endl;
+    setWidth(width);
+    setHeight(height);
+  }
+
   int Rectangle::getWidth() const
   {
     return width;
