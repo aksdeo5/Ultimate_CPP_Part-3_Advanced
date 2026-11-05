@@ -6,11 +6,12 @@ namespace aksdeo5::ultimate_cpp_advanced
   class Rectangle
   {
   public:
-    int width;
-    int height;
-
     void draw();
     int getArea();
+
+  private:
+    int width;
+    int height;
   };
 } // namespace aksdeo5::ultimate_cpp_advanced
 
