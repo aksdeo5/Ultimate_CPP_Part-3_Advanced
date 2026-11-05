@@ -1,0 +1,12 @@
+*.d
+*.o
+*.obj
+*.dll
+*.exe
+*.out
+/build/
+/CMakeUserPresets.json
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+.vscode/
