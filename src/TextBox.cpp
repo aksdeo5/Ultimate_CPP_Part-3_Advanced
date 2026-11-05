@@ -2,6 +2,10 @@
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
+  TextBox::TextBox(const string &value) : value{value}
+  {
+  }
+
   string TextBox::getValue() const
   {
     return value;

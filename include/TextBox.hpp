@@ -10,6 +10,9 @@ namespace aksdeo5::ultimate_cpp_advanced
   class TextBox
   {
   public:
+    TextBox() = default;
+    explicit TextBox(const string &value);
+
     string getValue() const;
     void setValue(const string &value);
 
