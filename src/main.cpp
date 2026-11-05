@@ -9,8 +9,9 @@ int main()
 {
     Rectangle rectangle;
 
-    // Cannot access private members of a class from outside
-    rectangle.width = -1;
+    // Mutating the state of an object through a setter
+    // A setter validates input and prevents the object from going into a bad state
+    rectangle.setWidth(-1);
 
     return 0;
 }

@@ -9,6 +9,14 @@ namespace aksdeo5::ultimate_cpp_advanced
     void draw();
     int getArea();
 
+    // Getters/Accessors
+    int getWidth() const;
+    int getHeight() const;
+
+    // Setters/Mutators
+    void setWidth(int width);
+    void setHeight(int height);
+
   private:
     int width;
     int height;
