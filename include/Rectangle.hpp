@@ -13,8 +13,15 @@ namespace aksdeo5::ultimate_cpp_advanced
     void draw();
     int getArea();
 
-    // Constructors
     Rectangle() = default;
+
+    // Explicitly added Copy-construtctor
+    Rectangle(const Rectangle &source);
+#if 0
+    // Deleting the implicit Copy-construtctor
+    Rectangle(const Rectangle &source) = delete;
+#endif
+
     Rectangle(int width, int height);
     Rectangle(int width, int height, const string &color);
 

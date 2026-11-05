@@ -16,6 +16,14 @@ namespace aksdeo5::ultimate_cpp_advanced
     return width * height;
   }
 
+  Rectangle::Rectangle(const Rectangle &source)
+  {
+    cout << "Construcing a Rectangle with a copy of another object" << endl;
+    width = source.width;
+    height = source.height;
+    color = source.color;
+  }
+
   Rectangle::Rectangle(int width, int height)
   {
     cout << "Construcing a Rectangle with width and height" << endl;
