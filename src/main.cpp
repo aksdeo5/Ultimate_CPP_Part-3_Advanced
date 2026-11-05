@@ -12,7 +12,8 @@ int main()
     Rectangle rectangle;
 #endif
 
-    Rectangle rectangle{5, 6};
+    // Input validation is not possible when a Member-initializer-list is used
+    Rectangle rectangle{5, -6};
     cout << rectangle.getArea() << endl;
 
     return 0;

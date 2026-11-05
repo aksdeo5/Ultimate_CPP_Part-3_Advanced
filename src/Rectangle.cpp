@@ -16,11 +16,11 @@ namespace aksdeo5::ultimate_cpp_advanced
     return width * height;
   }
 
-  Rectangle::Rectangle(int width, int height)
+  // Member Initializer List
+  // Only works for simple intializations
+  // Cannot implement validation logic
+  Rectangle::Rectangle(int width, int height) : width{width}, height{height}
   {
-    cout << "Construcing a Rectangle" << endl;
-    setWidth(width);
-    setHeight(height);
   }
 
   int Rectangle::getWidth() const
