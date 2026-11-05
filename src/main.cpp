@@ -1,4 +1,4 @@
-#include "TextBox.hpp"
+#include "Rectangle.hpp"
 
 #include <iostream>
 
@@ -7,8 +7,8 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    TextBox first;
-    TextBox second{"second"};
+    // Constructor delegation happens
+    Rectangle rectangle{5, 6, "yellow"};
 
     return 0;
 }
