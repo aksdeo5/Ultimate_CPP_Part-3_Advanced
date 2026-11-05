@@ -9,7 +9,9 @@ namespace aksdeo5::ultimate_cpp_advanced
     void draw();
     int getArea();
 
-    // Constructor
+    // Explicitly added compiler-defined default constructor
+    Rectangle() = default;
+
     Rectangle(int width, int height);
 
     // Getters/Accessors

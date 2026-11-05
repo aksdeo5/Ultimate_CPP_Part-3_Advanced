@@ -7,13 +7,9 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-#if 0
-    // Adding any explicit constructor removes the implicit default constructor
+    // Invoking explicitly added default constructor
     Rectangle rectangle;
-#endif
 
-    // Input validation is not possible when a Member-initializer-list is used
-    Rectangle rectangle{5, -6};
     cout << rectangle.getArea() << endl;
 
     return 0;
