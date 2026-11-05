@@ -25,6 +25,9 @@ namespace aksdeo5::ultimate_cpp_advanced
     Rectangle(int width, int height);
     Rectangle(int width, int height, const string &color);
 
+    // Destructor
+    ~Rectangle();
+
     // Getters/Accessors
     int getWidth() const;
     int getHeight() const;

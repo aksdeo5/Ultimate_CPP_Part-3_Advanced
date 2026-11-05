@@ -38,6 +38,11 @@ namespace aksdeo5::ultimate_cpp_advanced
     this->color = color;
   }
 
+  Rectangle::~Rectangle()
+  {
+    cout << "Destructing a Rectangle" << endl;
+  }
+
   int Rectangle::getWidth() const
   {
     return width;

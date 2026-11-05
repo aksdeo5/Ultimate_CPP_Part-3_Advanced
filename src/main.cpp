@@ -11,15 +11,9 @@ void show_rectangle(Rectangle rectangle)
 
 int main()
 {
+    // Destructor is invoked when objects go out of scope after the function finishes executing
     Rectangle first{5, 6};
-
-    // Copy-constructor is invoked when an object is intialized with another object
-    // Following statement is no longer valid if the copy-constrcutor is deleted
-    Rectangle second = first;
-
-    // Copy-constructor is invoked when an object is passed to a function by value
-    // Following statement is no longer valid if the copy-constrcutor is deleted
-    show_rectangle(second);
+    Rectangle second{10, 12};
 
     return 0;
 }
