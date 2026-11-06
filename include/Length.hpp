@@ -15,9 +15,6 @@ namespace aksdeo5::ultimate_cpp_advanced
     explicit Length(int value);
     Length() = default;
 
-    int getValue() const;
-    void setValue(int value);
-
     // Overloading the Equality-operator (==)
     // Overloading this operator implicitly overloads corrosponding Inequality-operator (!=)
     bool operator==(const Length &other) const;
@@ -29,12 +26,17 @@ namespace aksdeo5::ultimate_cpp_advanced
 
   private:
     int value = 0;
+    /*
+      If you declare a friend function inside a class without any forward declaration outside the class,
+      C++ treats it as if it belongs to the enclosing namespace of that class.
+
+      It is best practice to keep friend functions inside the enclosing namespace of the class.
+    */
+    friend ostream &operator<<(ostream &cout, const Length &length);
+    friend istream &operator>>(istream &cin, Length &length);
   };
 
-  /*
-    It's best practice to add the Stream-operator overloads in the same namespace
-    enclosing the corrosponding class
-  */
+  // Forward declarations of friend functions from the enclosing namespace is optional
   ostream &operator<<(ostream &cout, const Length &length);
   istream &operator>>(istream &cin, Length &length);
 
