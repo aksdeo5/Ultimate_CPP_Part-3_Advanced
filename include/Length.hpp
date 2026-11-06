@@ -53,6 +53,10 @@ namespace aksdeo5::ultimate_cpp_advanced
     Length operator++(int);
     Length operator--(int);
 
+    // Overloading type-conversion
+    // Casting the object to int
+    operator int() const;
+
   private:
     int value = 0;
     /*

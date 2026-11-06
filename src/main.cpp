@@ -1,4 +1,4 @@
-#include "SmartPointer.hpp"
+#include "Length.hpp"
 
 #include <iostream>
 
@@ -7,12 +7,9 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    SmartPointer ptr{new int};
-    *ptr = 5;
-    cout << *ptr << endl;
-
-    *ptr = 11;
-    cout << *ptr << endl;
+    Length length{5};
+    int x = length;
+    cout << x << endl;
 
     return 0;
 }
