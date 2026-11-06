@@ -9,11 +9,20 @@ int main()
 {
     Length first{5};
 
-    // Copy-constructor is invoked
-    Length second = first;
+    Length second = first++;
+    cout << first << ", " << second << endl;
 
-    // Assignment-operator is invoked
-    second = first;
+    first = static_cast<Length>(5);
+    second = ++first;
+    cout << first << ", " << second << endl;
+
+    first = static_cast<Length>(5);
+    second = first--;
+    cout << first << ", " << second << endl;
+
+    first = static_cast<Length>(5);
+    second = --first;
+    cout << first << ", " << second << endl;
 
     return 0;
 }

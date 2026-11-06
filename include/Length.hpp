@@ -45,6 +45,14 @@ namespace aksdeo5::ultimate_cpp_advanced
     // Overloading the Assignment-operator
     Length &operator=(const Length &other);
 
+    // Prefix Increment/Decrement operators
+    Length &operator++();
+    Length &operator--();
+
+    // Postfix Increment/Decrement operators
+    Length operator++(int);
+    Length operator--(int);
+
   private:
     int value = 0;
     /*

@@ -86,6 +86,32 @@ namespace aksdeo5::ultimate_cpp_advanced
     return *this;
   }
 
+  Length &Length::operator++()
+  {
+    ++value;
+    return *this;
+  }
+
+  Length &Length::operator--()
+  {
+    --value;
+    return *this;
+  }
+
+  Length Length::operator++(int)
+  {
+    Length copy = *this;
+    value++;
+    return copy;
+  }
+
+  Length Length::operator--(int)
+  {
+    Length copy = *this;
+    value--;
+    return copy;
+  }
+
   std::strong_ordering Length::operator<=>(const Length &other) const
   {
     return value <=> other.value;
