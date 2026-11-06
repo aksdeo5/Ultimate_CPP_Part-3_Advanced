@@ -1,4 +1,4 @@
-#include "Point.hpp"
+#include "Length.hpp"
 
 #include <iostream>
 
@@ -7,12 +7,13 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    Point first{5, 6};
-    Point second{5, 6};
-    Point third{10, 12};
+    Length first{5};
+    Length second{6};
 
-    cout << boolalpha << (first == second) << endl;
-    cout << boolalpha << (first == third) << endl;
+    cout << boolalpha << (first < second) << endl;
+    cout << boolalpha << (first <= second) << endl;
+    cout << boolalpha << (first > second) << endl;
+    cout << boolalpha << (first >= second) << endl;
 
     return 0;
 }

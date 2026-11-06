@@ -15,6 +15,12 @@ namespace aksdeo5::ultimate_cpp_advanced
     // Explictly overloading the Inequality-operator
     bool operator!=(int other) const;
 
+    // Overloading the Comparison-operators
+    bool operator<(const Length &other) const;
+    bool operator<=(const Length &other) const;
+    bool operator>(const Length &other) const;
+    bool operator>=(const Length &other) const;
+
   private:
     int value = 0;
   };
