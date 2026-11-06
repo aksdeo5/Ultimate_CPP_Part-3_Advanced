@@ -8,6 +8,11 @@ namespace aksdeo5::ultimate_cpp_advanced
   {
   }
 
+  int Length::getValue() const
+  {
+    return value;
+  }
+
   bool Length::operator==(const Length &other) const
   {
     return value == other.value;
@@ -22,4 +27,10 @@ namespace aksdeo5::ultimate_cpp_advanced
   {
     return value <=> other.value;
   }
+
+  ostream &operator<<(ostream &cout, const Length &length)
+  {
+    return cout << length.getValue();
+  }
+
 } // namespace aksdeo5::ultimate_cpp_advanced

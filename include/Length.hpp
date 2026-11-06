@@ -2,6 +2,9 @@
 #define AKSDEO5_ULTIMATE_CPP_ADVANCED_LENGTH_HPP
 
 #include <compare>
+#include <ostream>
+
+using namespace std;
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
@@ -9,6 +12,8 @@ namespace aksdeo5::ultimate_cpp_advanced
   {
   public:
     explicit Length(int value);
+
+    int getValue() const;
 
     // Overloading the Equality-operator (==)
     // Overloading this operator implicitly overloads corrosponding Inequality-operator (!=)
@@ -22,6 +27,13 @@ namespace aksdeo5::ultimate_cpp_advanced
   private:
     int value = 0;
   };
+
+  /*
+    It's best practice to add the Stream-insertion-operator-overload in the same namespace
+    enclosing the corrosponding class
+  */
+  ostream &operator<<(ostream &cout, const Length &length);
+
 } // namespace aksdeo5::ultimate_cpp_advanced
 
 #endif // AKSDEO5_ULTIMATE_CPP_ADVANCED_LENGTH_HPP

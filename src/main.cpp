@@ -7,13 +7,8 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    Length first{5};
-    Length second{6};
-
-    cout << boolalpha << (first < second) << endl;
-    cout << boolalpha << (first <= second) << endl;
-    cout << boolalpha << (first > second) << endl;
-    cout << boolalpha << (first >= second) << endl;
+    Length length{5};
+    cout << length << endl;
 
     return 0;
 }
