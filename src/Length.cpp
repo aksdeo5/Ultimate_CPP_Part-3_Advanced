@@ -112,11 +112,6 @@ namespace aksdeo5::ultimate_cpp_advanced
     return copy;
   }
 
-  Length::operator int() const
-  {
-    return value;
-  }
-
   std::strong_ordering Length::operator<=>(const Length &other) const
   {
     return value <=> other.value;
