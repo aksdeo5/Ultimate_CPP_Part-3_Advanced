@@ -1,8 +1,13 @@
 #include "TextBox.hpp"
+#include "Widget.hpp"
+
+#include <string>
+
+using namespace std;
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
-  TextBox::TextBox(const string &value) : value{value}
+  TextBox::TextBox(bool enabled, const string &value) : Widget(enabled), value{value}
   {
   }
 

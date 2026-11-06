@@ -1,5 +1,4 @@
-#include "Rectangle.hpp"
-#include "Circle.hpp"
+#include "TextBox.hpp"
 
 #include <iostream>
 
@@ -8,14 +7,8 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-  Rectangle rectangle;
-  Circle circle;
-
-  rectangle.setBackground("orange");
-  circle.setBackground("gold");
-
-  cout << rectangle.getBackground() << endl;
-  cout << circle.getBackground() << endl;
+  TextBox first{true};
+  TextBox second{true, "second"};
 
   return 0;
 }
