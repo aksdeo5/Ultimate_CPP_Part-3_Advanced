@@ -1,14 +1,14 @@
 #include "TextBox.hpp"
-#include "Widget.hpp"
 
-#include <string>
+#include <iostream>
 
 using namespace std;
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
-  TextBox::TextBox(bool enabled, const string &value) : Widget(enabled), value{value}
+  TextBox::~TextBox()
   {
+    cout << "TextBox destructed" << endl;
   }
 
   string TextBox::getValue() const

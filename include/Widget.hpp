@@ -6,7 +6,7 @@ namespace aksdeo5::ultimate_cpp_advanced
   class Widget
   {
   public:
-    Widget(bool enabled);
+    ~Widget();
 
     void enable();
     void disable();

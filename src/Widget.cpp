@@ -6,9 +6,9 @@ using namespace std;
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
-  Widget::Widget(bool enabled) : enabled{enabled}
+  Widget::~Widget()
   {
-    cout << "Widget constructed" << endl;
+    cout << "Widget destructed" << endl;
   }
 
   void Widget::enable()

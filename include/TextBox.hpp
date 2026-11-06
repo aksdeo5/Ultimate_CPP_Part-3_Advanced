@@ -13,10 +13,7 @@ namespace aksdeo5::ultimate_cpp_advanced
   class TextBox : public Widget
   {
   public:
-    // Inheriting all base class constructors
-    using Widget::Widget;
-
-    TextBox(bool enabled, const string &value);
+    ~TextBox();
 
     string getValue() const;
     void setValue(const string &value);

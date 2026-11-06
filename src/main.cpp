@@ -7,8 +7,8 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-  TextBox first{true};
-  TextBox second{true, "second"};
+  // Destructors are invoked in reverse order
+  TextBox first;
 
   return 0;
 }
