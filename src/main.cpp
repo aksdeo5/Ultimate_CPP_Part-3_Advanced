@@ -8,26 +8,12 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 int main()
 {
     Length first{5};
-    Length second{6};
 
-    first += second;
-    cout << first << endl;
+    // Copy-constructor is invoked
+    Length second = first;
 
-    first = static_cast<Length>(5);
-    first -= second;
-    cout << first << endl;
-
-    first = static_cast<Length>(5);
-    first *= second;
-    cout << first << endl;
-
-    first = static_cast<Length>(5);
-    first /= second;
-    cout << first << endl;
-
-    first = static_cast<Length>(5);
-    first %= second;
-    cout << first << endl;
+    // Assignment-operator is invoked
+    second = first;
 
     return 0;
 }

@@ -1,11 +1,17 @@
 #include "Length.hpp"
 
+#include <iostream>
 #include <compare>
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
   Length::Length(int value) : value{value}
   {
+  }
+
+  Length::Length(const Length &other) : value{other.value}
+  {
+    cout << "Object intialized as a copy of another object" << endl;
   }
 
   bool Length::operator==(const Length &other) const
@@ -70,6 +76,13 @@ namespace aksdeo5::ultimate_cpp_advanced
   Length &Length::operator%=(const Length &other)
   {
     value %= other.value;
+    return *this;
+  }
+
+  Length &Length::operator=(const Length &other)
+  {
+    cout << "Object copied by assignment to another object" << endl;
+    value = other.value;
     return *this;
   }
 

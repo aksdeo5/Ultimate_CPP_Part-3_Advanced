@@ -12,8 +12,12 @@ namespace aksdeo5::ultimate_cpp_advanced
   class Length
   {
   public:
-    explicit Length(int value);
     Length() = default;
+    explicit Length(int value);
+
+    // Explicitly adding the Copy-constructor
+    // It's best practice to add the Copy-constructor while addind the Assignment-operator overload
+    Length(const Length &other);
 
     // Overloading the Equality-operator (==)
     // Overloading this operator implicitly overloads corrosponding Inequality-operator (!=)
@@ -37,6 +41,9 @@ namespace aksdeo5::ultimate_cpp_advanced
     Length &operator*=(const Length &other);
     Length &operator/=(const Length &other);
     Length &operator%=(const Length &other);
+
+    // Overloading the Assignment-operator
+    Length &operator=(const Length &other);
 
   private:
     int value = 0;
