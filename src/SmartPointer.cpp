@@ -11,4 +11,10 @@ namespace aksdeo5::ultimate_cpp_advanced
     delete ptr;
     ptr = nullptr;
   }
+
+  int &SmartPointer::operator*() const
+  {
+    return *ptr;
+  }
+
 } // namespace aksdeo5::ultimate_cpp_advanced

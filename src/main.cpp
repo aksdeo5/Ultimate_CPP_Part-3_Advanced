@@ -1,4 +1,4 @@
-#include "Array.hpp"
+#include "SmartPointer.hpp"
 
 #include <iostream>
 
@@ -7,12 +7,12 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    Array array{5};
-    array[0] = 2;
-    cout << array[0] << endl;
+    SmartPointer ptr{new int};
+    *ptr = 5;
+    cout << *ptr << endl;
 
-    // Following statement throws exception
-    array[5] = 13;
+    *ptr = 11;
+    cout << *ptr << endl;
 
     return 0;
 }
