@@ -1,4 +1,4 @@
-#include "Length.hpp"
+#include "TextBox.hpp"
 
 #include <iostream>
 
@@ -7,9 +7,11 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    Length length{5};
-    int x = length;
-    cout << x << endl;
+    TextBox textBox;
+
+    // Invoking a base class member function on an object of derived class
+    textBox.disable();
+    cout << boolalpha << textBox.isEnabled() << endl;
 
     return 0;
 }

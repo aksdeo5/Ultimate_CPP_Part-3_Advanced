@@ -1,13 +1,16 @@
 #ifndef AKSDEO5_ULTIMATE_CPP_ADVANCED_TEXTBOX_HPP
 #define AKSDEO5_ULTIMATE_CPP_ADVANCED_TEXTBOX_HPP
 
+#include "Widget.hpp"
+
 #include <string>
 
 using namespace std;
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
-  class TextBox
+  // Class TextBox inhertits/extends class Widget
+  class TextBox : public Widget
   {
   public:
     TextBox() = default;
