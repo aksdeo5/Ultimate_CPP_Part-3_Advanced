@@ -21,6 +21,11 @@ namespace aksdeo5::ultimate_cpp_advanced
     return x == other.x && y == other.y;
   }
 
+  Point Point::operator+(const Point &other) const
+  {
+    return Point(x + other.x, y + other.y);
+  }
+
   ostream &operator<<(ostream &cout, const Point &point)
   {
     return cout << "(" << point.getX() << ", " << point.getY() << ")";

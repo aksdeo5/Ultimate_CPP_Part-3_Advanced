@@ -1,4 +1,4 @@
-#include "Length.hpp"
+#include "Point.hpp"
 
 #include <iostream>
 
@@ -7,23 +7,11 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    Length first{5};
-    Length second{6};
+    Point first{5, 6};
+    Point second{10, 12};
 
-    Length length = first + second;
-    cout << length << endl;
-
-    length = first - second;
-    cout << length << endl;
-
-    length = first * second;
-    cout << length << endl;
-
-    length = first / second;
-    cout << length << endl;
-
-    length = first % second;
-    cout << length << endl;
+    Point third = first + second;
+    cout << third << endl;
 
     return 0;
 }

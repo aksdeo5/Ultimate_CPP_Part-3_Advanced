@@ -21,6 +21,8 @@ namespace aksdeo5::ultimate_cpp_advanced
     int getY() const;
 
     bool operator==(const Point &other) const;
+
+    Point operator+(const Point &other) const;
   };
 
   ostream &operator<<(ostream &cout, const Point &point);
