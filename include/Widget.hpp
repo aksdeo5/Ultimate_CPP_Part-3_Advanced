@@ -6,6 +6,9 @@ namespace aksdeo5::ultimate_cpp_advanced
   class Widget
   {
   public:
+    // Virtual method
+    // Enforces dynamic-binding
+    virtual void draw() const;
     void enable();
     void disable();
     bool isEnabled();

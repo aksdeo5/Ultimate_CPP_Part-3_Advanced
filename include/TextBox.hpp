@@ -13,6 +13,8 @@ namespace aksdeo5::ultimate_cpp_advanced
   class TextBox : public Widget
   {
   public:
+    // Redefining virtual method (Overriding method)
+    void draw() const override;
     string getValue() const;
     void setValue(const string &value);
 
