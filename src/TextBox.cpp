@@ -6,11 +6,6 @@ using namespace std;
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
-  TextBox::~TextBox()
-  {
-    cout << "TextBox destructed" << endl;
-  }
-
   string TextBox::getValue() const
   {
     return value;

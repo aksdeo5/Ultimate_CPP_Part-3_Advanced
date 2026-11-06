@@ -6,11 +6,6 @@ using namespace std;
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
-  Widget::~Widget()
-  {
-    cout << "Widget destructed" << endl;
-  }
-
   void Widget::enable()
   {
     enabled = true;

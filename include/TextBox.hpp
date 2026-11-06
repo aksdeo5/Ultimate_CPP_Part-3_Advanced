@@ -13,8 +13,6 @@ namespace aksdeo5::ultimate_cpp_advanced
   class TextBox : public Widget
   {
   public:
-    ~TextBox();
-
     string getValue() const;
     void setValue(const string &value);
 
