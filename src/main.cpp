@@ -1,4 +1,4 @@
-#include "Point.hpp"
+#include "Length.hpp"
 
 #include <iostream>
 
@@ -7,11 +7,27 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    Point first{5, 6};
-    Point second{10, 12};
+    Length first{5};
+    Length second{6};
 
-    Point third = first + second;
-    cout << third << endl;
+    first += second;
+    cout << first << endl;
+
+    first = static_cast<Length>(5);
+    first -= second;
+    cout << first << endl;
+
+    first = static_cast<Length>(5);
+    first *= second;
+    cout << first << endl;
+
+    first = static_cast<Length>(5);
+    first /= second;
+    cout << first << endl;
+
+    first = static_cast<Length>(5);
+    first %= second;
+    cout << first << endl;
 
     return 0;
 }

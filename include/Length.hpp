@@ -31,6 +31,13 @@ namespace aksdeo5::ultimate_cpp_advanced
     Length operator/(const Length &other) const;
     Length operator%(const Length &other) const;
 
+    // It's best practice to overload the Compound-assignment operators for the specific Arithmetic operators
+    Length &operator+=(const Length &other);
+    Length &operator-=(const Length &other);
+    Length &operator*=(const Length &other);
+    Length &operator/=(const Length &other);
+    Length &operator%=(const Length &other);
+
   private:
     int value = 0;
     /*
