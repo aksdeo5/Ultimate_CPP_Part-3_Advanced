@@ -18,6 +18,31 @@ namespace aksdeo5::ultimate_cpp_advanced
     return value == other;
   }
 
+  Length Length::operator+(const Length &other) const
+  {
+    return Length(value + other.value);
+  }
+
+  Length Length::operator-(const Length &other) const
+  {
+    return Length(value - other.value);
+  }
+
+  Length Length::operator*(const Length &other) const
+  {
+    return Length(value * other.value);
+  }
+
+  Length Length::operator/(const Length &other) const
+  {
+    return Length(value / other.value);
+  }
+
+  Length Length::operator%(const Length &other) const
+  {
+    return Length(value % other.value);
+  }
+
   std::strong_ordering Length::operator<=>(const Length &other) const
   {
     return value <=> other.value;

@@ -7,10 +7,23 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    Length length;
-    cout << "Length: ";
-    cin >> length;
-    cout << "Length: " << length << endl;
+    Length first{5};
+    Length second{6};
+
+    Length length = first + second;
+    cout << length << endl;
+
+    length = first - second;
+    cout << length << endl;
+
+    length = first * second;
+    cout << length << endl;
+
+    length = first / second;
+    cout << length << endl;
+
+    length = first % second;
+    cout << length << endl;
 
     return 0;
 }

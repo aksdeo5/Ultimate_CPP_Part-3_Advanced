@@ -24,6 +24,13 @@ namespace aksdeo5::ultimate_cpp_advanced
     // Overloading this operator implicitly overloads all comparison operators (<, <=, >,>=)
     std::strong_ordering operator<=>(const Length &other) const;
 
+    // Overloading the Arithmetic operators
+    Length operator+(const Length &other) const;
+    Length operator-(const Length &other) const;
+    Length operator*(const Length &other) const;
+    Length operator/(const Length &other) const;
+    Length operator%(const Length &other) const;
+
   private:
     int value = 0;
     /*
