@@ -3,6 +3,7 @@
 
 #include <compare>
 #include <ostream>
+#include <istream>
 
 using namespace std;
 
@@ -12,8 +13,10 @@ namespace aksdeo5::ultimate_cpp_advanced
   {
   public:
     explicit Length(int value);
+    Length() = default;
 
     int getValue() const;
+    void setValue(int value);
 
     // Overloading the Equality-operator (==)
     // Overloading this operator implicitly overloads corrosponding Inequality-operator (!=)
@@ -29,10 +32,11 @@ namespace aksdeo5::ultimate_cpp_advanced
   };
 
   /*
-    It's best practice to add the Stream-insertion-operator-overload in the same namespace
+    It's best practice to add the Stream-operator overloads in the same namespace
     enclosing the corrosponding class
   */
   ostream &operator<<(ostream &cout, const Length &length);
+  istream &operator>>(istream &cin, Length &length);
 
 } // namespace aksdeo5::ultimate_cpp_advanced
 

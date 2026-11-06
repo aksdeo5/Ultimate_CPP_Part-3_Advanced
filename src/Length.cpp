@@ -13,6 +13,11 @@ namespace aksdeo5::ultimate_cpp_advanced
     return value;
   }
 
+  void Length::setValue(int value)
+  {
+    this->value = value;
+  }
+
   bool Length::operator==(const Length &other) const
   {
     return value == other.value;
@@ -31,6 +36,14 @@ namespace aksdeo5::ultimate_cpp_advanced
   ostream &operator<<(ostream &cout, const Length &length)
   {
     return cout << length.getValue();
+  }
+
+  istream &operator>>(istream &cin, Length &length)
+  {
+    int value;
+    cin >> value;
+    length.setValue(value);
+    return cin;
   }
 
 } // namespace aksdeo5::ultimate_cpp_advanced
