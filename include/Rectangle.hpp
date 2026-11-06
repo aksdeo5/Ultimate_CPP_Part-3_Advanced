@@ -1,54 +1,24 @@
 #ifndef AKSDEO5_ULTIMATE_CPP_ADVANCED_RECTANGLE_HPP
 #define AKSDEO5_ULTIMATE_CPP_ADVANCED_RECTANGLE_HPP
 
-#include <string>
-
-using namespace std;
+#include "Shape.hpp"
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
-  class Rectangle
+  class Rectangle : public Shape
   {
   public:
-    // Const-qualified member functions
-    void draw() const;
-    int getArea() const;
-
-    Rectangle() = default;
-
-    // Explicitly added Copy-construtctor
-    Rectangle(const Rectangle &source);
-#if 0
-    // Deleting the implicit Copy-construtctor
-    Rectangle(const Rectangle &source) = delete;
-#endif
-
-    Rectangle(int width, int height);
-    Rectangle(int width, int height, const string &color);
-
-    // Destructor
-    ~Rectangle();
-
-    // Getters/Accessors
     int getWidth() const;
     int getHeight() const;
 
-    // Setters/Mutators
     void setWidth(int width);
     void setHeight(int height);
-
-    // Static Member Function
-    static int getObjectsCount();
 
   private:
     int width = 0;
     int height = 0;
-    string color;
-
-    // Static Member Variable
-    // Must be explicitly defined in the implemenation code
-    static int objectsCount;
   };
+
 } // namespace aksdeo5::ultimate_cpp_advanced
 
 #endif // AKSDEO5_ULTIMATE_CPP_ADVANCED_RECTANGLE_HPP

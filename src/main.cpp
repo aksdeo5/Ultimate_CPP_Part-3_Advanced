@@ -1,4 +1,5 @@
-#include "TextBox.hpp"
+#include "Rectangle.hpp"
+#include "Circle.hpp"
 
 #include <iostream>
 
@@ -7,11 +8,14 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    TextBox textBox;
+  Rectangle rectangle;
+  Circle circle;
 
-    // Invoking a base class member function on an object of derived class
-    textBox.disable();
-    cout << boolalpha << textBox.isEnabled() << endl;
+  rectangle.setBackground("orange");
+  circle.setBackground("gold");
 
-    return 0;
+  cout << rectangle.getBackground() << endl;
+  cout << circle.getBackground() << endl;
+
+  return 0;
 }
