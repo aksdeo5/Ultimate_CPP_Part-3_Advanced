@@ -1,4 +1,4 @@
-#include "Length.hpp"
+#include "Point.hpp"
 
 #include <iostream>
 
@@ -7,8 +7,8 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    Length length{5};
-    cout << length << endl;
+    Point point{5, 6};
+    cout << point << endl;
 
     return 0;
 }
