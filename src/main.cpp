@@ -1,4 +1,4 @@
-#include "Length.hpp"
+#include "Array.hpp"
 
 #include <iostream>
 
@@ -7,22 +7,12 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-    Length first{5};
+    Array array{5};
+    array[0] = 2;
+    cout << array[0] << endl;
 
-    Length second = first++;
-    cout << first << ", " << second << endl;
-
-    first = static_cast<Length>(5);
-    second = ++first;
-    cout << first << ", " << second << endl;
-
-    first = static_cast<Length>(5);
-    second = first--;
-    cout << first << ", " << second << endl;
-
-    first = static_cast<Length>(5);
-    second = --first;
-    cout << first << ", " << second << endl;
+    // Following statement throws exception
+    array[5] = 13;
 
     return 0;
 }
