@@ -1,5 +1,7 @@
 #include "Length.hpp"
 
+#include <compare>
+
 namespace aksdeo5::ultimate_cpp_advanced
 {
   Length::Length(int value) : value{value}
@@ -16,29 +18,8 @@ namespace aksdeo5::ultimate_cpp_advanced
     return value == other;
   }
 
-  // Implementing the logic in terms of Equality-operator
-  bool Length::operator!=(int other) const
+  std::strong_ordering Length::operator<=>(const Length &other) const
   {
-    return !operator==(other);
-  }
-
-  bool Length::operator<(const Length &other) const
-  {
-    return value < other.value;
-  }
-
-  bool Length::operator<=(const Length &other) const
-  {
-    return !operator>(other);
-  }
-
-  bool Length::operator>(const Length &other) const
-  {
-    return value > other.value;
-  }
-
-  bool Length::operator>=(const Length &other) const
-  {
-    return !operator<(other);
+    return value <=> other.value;
   }
 } // namespace aksdeo5::ultimate_cpp_advanced
