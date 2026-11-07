@@ -9,13 +9,17 @@ using namespace std;
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
-  // Class TextBox inhertits/extends class Widget
-  class TextBox : public Widget
+  // Declaring a class as final
+  // We cannot further inherit/extend a final class
+  class TextBox final : public Widget
   {
   public:
     ~TextBox();
-    // Redefining virtual method (Overriding method)
-    void draw() const override;
+
+    // Declaring a method as final
+    // We cannot further override it in derived classes
+    void draw() const override final;
+
     string getValue() const;
     void setValue(const string &value);
 
