@@ -1,26 +1,31 @@
-#include "Shape.hpp"
-#include "Rectangle.hpp"
-#include "Circle.hpp"
+#include "Widget.hpp"
+#include "TextBox.hpp"
+#include "CheckBox.hpp"
 
 #include <iostream>
 
 using namespace std;
 using namespace aksdeo5::ultimate_cpp_advanced;
 
+void drawWidget(const Widget &widget);
+
 int main()
 {
-  Shape shape;
-  Rectangle rectangle;
-  Circle circle;
+  TextBox textBox;
+  CheckBox checkBox;
 
-  Shape &shapeA = shape;
-  shapeA.draw();
-
-  Shape &shapeB = rectangle;
-  shapeB.draw();
-
-  Shape &shapeC = circle;
-  shapeC.draw();
+  // Polymorphism in action
+  // The following function calls behave differently according to the specific form of the object at runtime
+  drawWidget(textBox);
+  drawWidget(checkBox);
 
   return 0;
+}
+
+// Polymorphic Widget object
+// The Widget object can take many different forms at runtime
+// The 'draw()' member function behaves differently according to the specific form of the object at runtime
+void drawWidget(const Widget &widget)
+{
+  widget.draw();
 }
