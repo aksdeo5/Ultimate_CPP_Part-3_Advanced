@@ -10,8 +10,9 @@ namespace aksdeo5::ultimate_cpp_advanced
     // Ensuring destructors are called appropriately in case of polymorphism
     virtual ~Widget() = default;
 
-    // Virtual method
-    virtual void draw() const;
+    // Pure-Virtual method
+    // Makes the class abstract
+    virtual void draw() const = 0;
 
     void enable();
     void disable();

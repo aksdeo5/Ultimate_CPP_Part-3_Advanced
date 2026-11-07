@@ -6,11 +6,6 @@ using namespace std;
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
-  void Widget::draw() const
-  {
-    cout << "Drawing a Widget" << endl;
-  }
-
   void Widget::enable()
   {
     enabled = true;

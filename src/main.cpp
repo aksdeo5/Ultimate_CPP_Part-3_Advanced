@@ -1,23 +1,27 @@
 #include "Widget.hpp"
 #include "TextBox.hpp"
-#include "CheckBox.hpp"
 
 #include <iostream>
-#include <vector>
-#include <memory>
 
 using namespace std;
 using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-  // Polymorphic Collections
-  vector<unique_ptr<Widget>> widgets;
-  widgets.push_back(make_unique<TextBox>());
-  widgets.push_back(make_unique<CheckBox>());
+#if 0
+  // We cannot instantiate an abstract class
+  Widget widget;
+#endif
 
-  for (const auto &widget : widgets)
-    widget->draw();
+  TextBox textBox;
+
+  // We can still create a reference of an abstract class for achieving polymorphism
+  Widget &widgetRef = textBox;
+  widgetRef.draw();
+
+  // We can still create a pointer to an abstract class for achieving polymorphism
+  Widget *widgetPtr = &textBox;
+  widgetPtr->draw();
 
   return 0;
 }
