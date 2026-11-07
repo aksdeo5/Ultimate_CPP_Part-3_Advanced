@@ -6,6 +6,11 @@ using namespace std;
 
 namespace aksdeo5::ultimate_cpp_advanced
 {
+  TextBox::~TextBox()
+  {
+    cout << "TextBox destructed" << endl;
+  }
+
   void TextBox::draw() const
   {
     cout << "Drawing a TextBox" << endl;

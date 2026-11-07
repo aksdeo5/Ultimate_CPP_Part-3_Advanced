@@ -6,9 +6,13 @@ namespace aksdeo5::ultimate_cpp_advanced
   class Widget
   {
   public:
+    // If a class contains at least one virtual method, it must have a virtual destructor
+    // Ensuring destructors are called appropriately in case of polymorphism
+    virtual ~Widget() = default;
+
     // Virtual method
-    // Enforces dynamic-binding
     virtual void draw() const;
+
     void enable();
     void disable();
     bool isEnabled();

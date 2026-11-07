@@ -8,6 +8,8 @@ namespace aksdeo5::ultimate_cpp_advanced
   class CheckBox : public Widget
   {
   public:
+    ~CheckBox();
+
     void draw() const override;
   };
 
