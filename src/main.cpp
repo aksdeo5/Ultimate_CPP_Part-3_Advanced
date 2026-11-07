@@ -3,29 +3,21 @@
 #include "CheckBox.hpp"
 
 #include <iostream>
+#include <vector>
+#include <memory>
 
 using namespace std;
 using namespace aksdeo5::ultimate_cpp_advanced;
 
-void drawWidget(const Widget &widget);
-
 int main()
 {
-  TextBox textBox;
-  CheckBox checkBox;
+  // Polymorphic Collections
+  vector<unique_ptr<Widget>> widgets;
+  widgets.push_back(make_unique<TextBox>());
+  widgets.push_back(make_unique<CheckBox>());
 
-  // Polymorphism in action
-  // The following function calls behave differently according to the specific form of the object at runtime
-  drawWidget(textBox);
-  drawWidget(checkBox);
+  for (const auto &widget : widgets)
+    widget->draw();
 
   return 0;
-}
-
-// Polymorphic Widget object
-// The Widget object can take many different forms at runtime
-// The 'draw()' member function behaves differently according to the specific form of the object at runtime
-void drawWidget(const Widget &widget)
-{
-  widget.draw();
 }
