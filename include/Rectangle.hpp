@@ -8,6 +8,8 @@ namespace aksdeo5::ultimate_cpp_advanced
   class Rectangle : public Shape
   {
   public:
+    void draw() const override;
+
     int getWidth() const;
     int getHeight() const;
 

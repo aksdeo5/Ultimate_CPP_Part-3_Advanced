@@ -10,6 +10,7 @@ namespace aksdeo5::ultimate_cpp_advanced
   class Shape
   {
   public:
+    virtual void draw() const;
     string getBackground() const;
     void setBackground(string background);
 

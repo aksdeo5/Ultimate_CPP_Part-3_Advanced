@@ -8,6 +8,8 @@ namespace aksdeo5::ultimate_cpp_advanced
   class Circle : public Shape
   {
   public:
+    void draw() const override;
+
     int getRadius() const;
 
     void setRadius(int radius);
