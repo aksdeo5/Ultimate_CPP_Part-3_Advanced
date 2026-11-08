@@ -23,11 +23,17 @@ namespace aksdeo5::ultimate_cpp_advanced
 
   void Rectangle::setWidth(int width)
   {
+    if (width < 0)
+      throw invalid_argument("The width cannot be negative!");
+
     this->width = width;
   }
 
   void Rectangle::setHeight(int height)
   {
+    if (height < 0)
+      throw invalid_argument("The height cannot be negative!");
+
     this->height = height;
   }
 
