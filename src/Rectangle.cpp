@@ -26,6 +26,9 @@ namespace aksdeo5::ultimate_cpp_advanced
     if (width < 0)
       throw invalid_argument("The width cannot be negative!");
 
+    if (width > 99)
+      throw out_of_range("The width cannot be greater than 99!");
+
     this->width = width;
   }
 
@@ -33,6 +36,9 @@ namespace aksdeo5::ultimate_cpp_advanced
   {
     if (height < 0)
       throw invalid_argument("The height cannot be negative!");
+
+    if (height > 99)
+      throw out_of_range("The width height be greater than 99!");
 
     this->height = height;
   }

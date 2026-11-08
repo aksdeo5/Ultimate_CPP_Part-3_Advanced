@@ -23,8 +23,17 @@ int main()
     // The following code is dependent on the previous error-prone code
     cout << "This statement doesn't execute if the exception is thrown." << endl;
   }
-  // Catching the potential exception
-  catch (const invalid_argument &ex)
+  // Catching multiple exceptions
+  /*
+    While catching multiple exceptions from the same inheritance hierarchy,
+    they should be ordered from the most specific to the most generic.
+  */
+  catch (const out_of_range &ex)
+  {
+    cout << ex.what() << endl;
+  }
+
+  catch (const logic_error &ex)
   {
     cout << ex.what() << endl;
   }
