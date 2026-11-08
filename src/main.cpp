@@ -7,8 +7,18 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 void creatRectangle()
 {
-  Rectangle rectangle;
-  rectangle.setWidth(-1);
+  try
+  {
+    // Open some system resource handlers
+    Rectangle rectangle;
+    rectangle.setWidth(-1);
+  }
+  catch (const invalid_argument &e)
+  {
+    // Release the system resource handlers
+    cout << "Releasing the open system resource handlers" << endl;
+    throw;
+  }
 }
 
 void doWork()
@@ -27,7 +37,8 @@ int main()
   }
   catch (const exception &ex)
   {
-    cout << ex.what() << endl;
+    // Actually catching the exception
+    cerr << ex.what() << endl;
   }
 
   return 0;
