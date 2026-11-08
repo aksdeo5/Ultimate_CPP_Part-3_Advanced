@@ -1,4 +1,4 @@
-#include "FileIO.hpp"
+#include "DateTime.hpp"
 
 #include <iostream>
 
@@ -7,14 +7,14 @@ using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
-  FileIO fileIO{"fileName"};
+  DateTime dateTime{2026, 11, 8, 10, 25, 44};
 
-  // Accessing individual members of both base classes
-  cout << fileIO.read() << endl;
-  fileIO.write();
-
-  // Accessing a common member by referencing the specific base class
-  cout << fileIO.FileReader::fileName() << endl;
+  cout << "Year: " << dateTime.getYear() << endl;
+  cout << "Month: " << dateTime.getMonth() << endl;
+  cout << "Day: " << dateTime.getDay() << endl;
+  cout << "Hour: " << dateTime.getHour() << endl;
+  cout << "Minute: " << dateTime.getMinute() << endl;
+  cout << "Second: " << dateTime.getSecond() << endl;
 
   return 0;
 }
