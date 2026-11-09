@@ -2,25 +2,25 @@
 
 using namespace std;
 
-// Function Template
-template <typename T>
-T larger(T first, T second);
+// Function Template with multiple Type-parameters
+template <typename K, typename V>
+void display(K key, V value);
 
 int main()
 {
   /*** Templates ***/
 
-  // Providing explicit generic-type-arguments
-  auto autoLarger = larger<double>(5, 6.0);
-
-  cout << autoLarger << endl;
+  display("five", 5);
+  display(5, "five");
+  display("5", "five");
+  display(5, 5);
 
   return 0;
 }
 
-// Defining a Function Template
-template <typename T>
-T larger(T first, T second)
+// Defining a Function Template with multiple Type-parameters
+template <typename K, typename V>
+void display(K key, V value)
 {
-  return first > second ? first : second;
+  cout << key << "=" << value << endl;
 }
