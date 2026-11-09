@@ -1,26 +1,17 @@
+#include "Pair.hpp"
+
 #include <iostream>
 
 using namespace std;
-
-// Function Template with multiple Type-parameters
-template <typename K, typename V>
-void display(K key, V value);
+using namespace aksdeo5::ultimate_cpp_advanced;
 
 int main()
 {
   /*** Templates ***/
 
-  display("five", 5);
-  display(5, "five");
-  display("5", "five");
-  display(5, 5);
+  Pair pair{"five", 5};
+
+  cout << pair.getKey() << "=" << pair.getValue() << endl;
 
   return 0;
-}
-
-// Defining a Function Template with multiple Type-parameters
-template <typename K, typename V>
-void display(K key, V value)
-{
-  cout << key << "=" << value << endl;
 }
