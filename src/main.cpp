@@ -1,28 +1,30 @@
-#include "Rectangle.hpp"
-#include "AccountLocked.hpp"
-
 #include <iostream>
 
 using namespace std;
-using namespace aksdeo5::ultimate_cpp_advanced;
 
-void login()
-{
-  throw AccountLocked{};
-}
+// Function Template
+template <typename T>
+T larger(T first, T second);
 
 int main()
 {
-  /*** Exception Handling ***/
+  /*** Templates ***/
 
-  try
-  {
-    login();
-  }
-  catch (const exception &ex)
-  {
-    cerr << ex.what() << endl;
-  }
+  int intLarger = larger(5, 6);
+  cout << intLarger << endl;
+
+  double doubleLarger = larger(5.5, 6.6);
+  cout << doubleLarger << endl;
+
+  char charLarger = larger('a', 'b');
+  cout << charLarger << endl;
 
   return 0;
+}
+
+// Defining a Function Template
+template <typename T>
+T larger(T first, T second)
+{
+  return first > second ? first : second;
 }
