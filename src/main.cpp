@@ -1,3 +1,4 @@
+#include "Array.hpp"
 #include "Pair.hpp"
 
 #include <iostream>
@@ -9,9 +10,15 @@ int main()
 {
   /*** Templates ***/
 
-  Pair pair{"five", 5};
+  Array<Pair<string, int>> pairs{3};
 
-  cout << pair.getKey() << "=" << pair.getValue() << endl;
+  pairs[0] = {"five", 5};
+  pairs[1] = {"six", 6};
+  pairs[2] = {"eight", 8};
+
+  cout << pairs[0] << endl;
+  cout << pairs[1] << endl;
+  cout << pairs[2] << endl;
 
   return 0;
 }
