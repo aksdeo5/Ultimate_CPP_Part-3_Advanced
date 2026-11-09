@@ -10,14 +10,10 @@ int main()
 {
   /*** Templates ***/
 
-  int intLarger = larger(5, 6);
-  cout << intLarger << endl;
+  // Providing explicit generic-type-arguments
+  auto autoLarger = larger<double>(5, 6.0);
 
-  double doubleLarger = larger(5.5, 6.6);
-  cout << doubleLarger << endl;
-
-  char charLarger = larger('a', 'b');
-  cout << charLarger << endl;
+  cout << autoLarger << endl;
 
   return 0;
 }
